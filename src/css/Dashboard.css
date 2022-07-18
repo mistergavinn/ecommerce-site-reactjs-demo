@@ -1,0 +1,44 @@
+/* Dashboard */
+table {
+    border-collapse: collapse;
+    height: 100%;
+    width: 100%;
+  }
+  th {
+    font-size: 1.2rem;
+    border-bottom: 1px solid black;
+    margin: 5px;
+  }
+  tr {
+    padding: 5px;
+  }
+  td {
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin: 5px;
+  }
+  
+  td input {
+    text-align: center;
+  }
+  
+  table tbody .img-container {
+    width: 300px;
+  }
+  
+  table tbody .img-container img {
+    transform: scale(0.7);
+  }
+  
+  table tbody .dashboard-btn {
+    height: 30px;
+    width: 50px;
+  }
+  
+  .logout-btn {
+    position: absolute;
+    right: 15%;
+    top: 15%;
+    height: 30px;
+    width: 50px;
+  }
