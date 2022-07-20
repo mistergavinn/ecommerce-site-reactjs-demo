@@ -11,7 +11,7 @@ const CartPrice = ({ subtotal, promoCode, discount, grandTotal }) => {
 
     return (
       <>
-        <label>PROMO CODE:</label>
+        {/* <label>PROMO CODE:</label>
         <div className="promo-code">
           <input
             type="text"
@@ -20,7 +20,7 @@ const CartPrice = ({ subtotal, promoCode, discount, grandTotal }) => {
             value={code}
           />
           <Button text="APPLY" onClick={useCode} />
-        </div>
+        </div> */}
         <div className="price-row">
           <span>SUBTOTAL:</span>
           <span>{`$${subtotal}`}</span>
@@ -29,10 +29,10 @@ const CartPrice = ({ subtotal, promoCode, discount, grandTotal }) => {
           <span>SHIPPING:</span>
           <span>$1.90</span>
         </div>
-        <div className="price-row">
+        {/* <div className="price-row">
           <span>{`PROMO CODE: ${discount ? "10% OFF" : ""}`}</span>
           <span>{`-$${discount}`}</span>
-        </div>
+        </div> */}
         <div className="price-row">
           <span>
             <b>GRAND TOTAL:</b>

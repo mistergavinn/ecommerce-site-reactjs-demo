@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 
 import './App.css';
@@ -9,6 +9,8 @@ import Footer from './Components/UI-Elements/Footer';
 import Login from './Components/Login';
 import Dashboard from './Components/Dashboard';
 import Cart from './Components/Cart';
+import AboutUs from './Components/AboutUs';
+import Contact from './Components/Contact';
 
 const App = () => {
   // Product List
@@ -132,7 +134,7 @@ const App = () => {
     updateGrandTotal(cartItem.price, true);
   };
   const deleteCartItem = (cartItem) => {
-    setCartList(cartList.filter((item) => item.name !== cartItem.model));
+    setCartList(cartList.filter((item) => item.model !== cartItem.model));
     setTotalQty(totalQty-1);
     setSubtotal(subtotal-cartItem.price);
     updateGrandTotal(cartItem.price, false);
@@ -194,14 +196,15 @@ const App = () => {
     <BrowserRouter>
       <div>
         <Topbar authorized={authorized} cartQty={totalQty} />
-        <div className="border-outline">
+        <div className="">
           <Routes>
+            <Route path="/" element={<Navigate to="/shoe-warehouse/home" />} />
             <Route
-              path="/"
+              path="/shoe-warehouse/home"
               element={<Home itemList={itemList} updateCart={updateCart} />}
             />
             <Route
-              path="/login"
+              path="/shoe-warehouse/login"
               element={
                 <Login
                   updateAuthorisation={updateAuthorization}
@@ -210,7 +213,7 @@ const App = () => {
               }
             />
             <Route
-              path="/dashboard"
+              path="/shoe-warehouse/dashboard"
               element={
                 <Dashboard
                   authorized={authorized}
@@ -223,7 +226,7 @@ const App = () => {
               }
             />
             <Route
-              path="/cart"
+              path="/shoe-warehouse/cart"
               element={
                 <Cart
                   cartList={cartList}
@@ -236,7 +239,10 @@ const App = () => {
                 />
               }
             />
-            about contact Company
+            <Route path="/shoe-warehouse/about-us" element={<AboutUs />} />
+            <Route path="/shoe-warehouse/contact-us" element={<Contact />} />
+             
+            Company
           </Routes>
         </div>
         <Footer />

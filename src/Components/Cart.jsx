@@ -3,6 +3,7 @@ import Title from "./UI-Elements/Title";
 import CartItem from "./UI-Elements/CartItem";
 import CartPrice from "./UI-Elements/CartPrice";
 
+import "../css/Cart.css";
 
 const Cart = ({
   cartList,
@@ -50,8 +51,8 @@ const Cart = ({
             <CartPrice
               subtotal={subtotal}
               grandTotal={grandTotal}
-              promoCode={promoCode}
-              discount={discount}
+              //promoCode={promoCode}
+              //discount={discount}
             />
           </div>
         </div>

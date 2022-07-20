@@ -11,8 +11,8 @@ const Footer = () => {
       <footer>
         <div className="btm-bar">
           <div className="page-link">
-            <Link to="/shoe-warehouse/about">About us</Link>
-            <Link to="/shoe-warehouse/contact">Contact Us</Link>
+            <Link to="/shoe-warehouse/about-us">About us</Link>
+            <Link to="/shoe-warehouse/contact-us">Contact Us</Link>
           </div>
 
           <div className="social-media">

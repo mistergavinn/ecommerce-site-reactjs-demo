@@ -12,11 +12,11 @@ const Topbar = ({authorized, cartQty}) => {
       <header className="">
         <div className="top-bar">
           <div className="logo">
-            <Link to="/">Home</Link>
+            <Link to="/shoe-warehouse/home">Home</Link>
           </div>
 
           <div className="cart-btn">
-            <Link to="/cart">
+            <Link to="/shoe-warehouse/cart">
               Cart
               <div className={`cart-num ${cartQty ? "" : "none"}`}>
                 {cartQty}
@@ -26,9 +26,9 @@ const Topbar = ({authorized, cartQty}) => {
 
           <div className="login-btn">
             {authorized ? (
-              <Link to="/dashboard">Dashboard</Link>
+              <Link to="/shoe-warehouse/dashboard">Dashboard</Link>
             ) : (
-              <Link to="/login">Login</Link>
+              <Link to="/shoe-warehouse/login">Login</Link>
             )}
           </div>
         </div>
